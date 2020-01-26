@@ -1,0 +1,91 @@
+/* Geral */
+
+body {
+    padding-top: 106px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.row-wrap {
+    flex-flow: row wrap;
+}
+
+/* Section Intro */
+
+.intro {
+    height: calc(700px - 106px);
+    width: 100%;
+}
+
+.intro .intro-item .lead {
+    font-size: 1.25em;
+}
+
+@media(max-width: 1199px) {
+    .intro .intro-item {
+        text-align: center;
+        align-self: center !important;
+    }
+    .intro .content {
+        flex-direction: column !important;
+        justify-content: space-between !important;
+    }
+    .intro .intro-item img {
+        height: 400px;
+    }
+    @media(max-width: 767px) {
+        .intro .intro-item h1 {
+            font-size: 3.5em;
+        }
+        .intro .intro-item img {
+            height: 350px;
+        }
+        @media(max-width: 575px) {
+            .intro .intro-item h1 {
+                font-size: 2.5em;
+            }   
+            .intro .intro-item img {
+                height: 260px;
+            }
+        }
+    }
+}
+
+/* Section Uniao */
+
+#uniao {
+    background: url(../assets/img/bg-uniao.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media(max-width: 767px) {
+    #uniao #frase {
+        font-size: 3.5em;
+    }
+    @media(max-width: 575px) {
+        #uniao #frase {
+            font-size: 2.5em;
+        }   
+    }
+}
+
+/* Section Cursos */
+
+.cursos .card-body .info {
+    font-size: 0.7em;
+}
+
+/* Footer */
+
+@media(max-width: 575px) {
+    footer {
+        text-align: center;
+    }
+
+    footer #rede-social ul li a {
+        margin: 0 auto;
+    }
+}
