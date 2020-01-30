@@ -67,35 +67,31 @@
 		<div class="container py-5">
 			<h1 class=" text-primary display-4">Cadastre-se</h1>
 			<p class="lead">Cria sua conta para acessar nossos cursos!</p>
-			<form class="py-3">
+			<form class="py-3" id="form-registro" method="POST">
 				<div class="form-group">
-					<label for="exampleInputName">Nome completo</label>
-					<input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
-						placeholder="Digite seu nome completo">
+					<label for="nome">Nome completo</label>
+					<input type="text" class="form-control" id="nome" name="nome" aria-describedby="nameHelp" placeholder="Digite seu nome completo">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputCPF">CPF</label>
-					<input type="text" class="form-control cpf" id="exampleInputCPF" aria-describedby="cpfHelp"
+					<label for="cpf">CPF</label>
+					<input type="text" class="form-control cpf" id="cpf" aria-describedby="cpfHelp"
 						placeholder="Digite seu CPF">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputPhone">Telefone</label>
-					<input type="text" class="form-control cellphone_with_ddd" id="exampleInputPhone" aria-describedby="phoneHelp"
-						placeholder="Digite seu telefone">
+					<label for="telefone">Telefone</label>
+					<input type="text" class="form-control cellphone_with_ddd" id="telefone" name="telefone" aria-describedby="phoneHelp" placeholder="Digite seu telefone">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">Email</label>
-					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Digite seu email">
+					<label for="email">Email</label>
+					<input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite seu email">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputPassword1">Senha</label>
-					<input type="password" class="form-control" id="exampleInputPassword1"
-						placeholder="Digite sua senha">
+					<label for="senha">Senha</label>
+					<input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha">
 				</div>
 				<div class="form-check">
-					<input type="checkbox" class="form-check-input" id="exampleCheck1">
-					<label class="form-check-label" for="exampleCheck1">Lembrar de mim</label>
+					<input type="checkbox" class="form-check-input" id="check-form-registro">
+					<label class="form-check-label" for="check-form-registro">Lembrar de mim</label>
 				</div>
 				<button type="submit" class="btn btn-primary my-3">Cadastrar</button>
 			</form>
@@ -147,12 +143,13 @@
 		</div>
 	</footer>
 
-	<script type="text/javascript" src="js/jquery-3.3.1.slim.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/jquery.mask.min.js"></script>
-    <script type="text/javascript" src="js/masks-input.js"></script>
+	<script type="text/javascript" src="js/masks-input.js"></script>
+	<script type="text/javascript" src="js/jquery-validator.min.js"></script>
+	<script type="text/javascript" src="js/validate-forms.js"></script>
 </body>
 
 </html>
