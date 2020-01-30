@@ -1,0 +1,12 @@
+.comentarios {
+    .card {
+        .card-img-top {
+            width: 150px;
+            height: 150px;            
+            @media(max-width: 575px) {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
