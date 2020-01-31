@@ -1,52 +1,135 @@
-// Container widths
-//
-// Set the container width, and override it for fixed navbars in media queries.
+// Grid variables
+$cols: 12;
+$gutter: 20px;
+$xl-device: 1200px;
+$lg-device: 992px;
+$md-device: 768px;
+$sm-device: 576px;
 
-@if $enable-grid-classes {
-  .container {
-    @include make-container();
-    @include make-container-max-widths();
-  }
+// Box-sizing
+*, *::after, *::before {
+    box-sizing: border-box;
 }
 
-// Fluid container
-//
-// Utilizes the mixin meant for fixed width containers, but with 100% width for
-// fluid, full width layouts.
+// Media-querie mixin
+@mixin device($size) {
+    @if $size == xl {
+        @media screen and (min-width: #{$xl-device}) {
+            @content;
+        }
+    }
+    @else if $size == lg {
+        @media screen and (min-width: #{$lg-device}) and (max-width:  #{$xl-device - 1}) {
+            @content;
+        }
+    }
+    @else if $size == md {
+        @media screen and (min-width: #{$md-device}) and (max-width:  #{$lg-device - 1}) {
+            @content;
+        }
+    }
+    @else if $size == sm {
+        @media screen and (max-width: #{$md-device - 1}) {
+            @content;
+        }
+    }
+}
 
-@if $enable-grid-classes {
-  .container-fluid {
-    @include make-container();
-  }
+// Grid
+@function grid($col, $offset: false) {
+    $width: ($col / $cols) * 100%;
+    $result: calc(#{$width} - #{$gutter});
+    @if $offset == offset {
+        $gutter: $gutter / 2;
+        $result: calc(#{$width} + #{$gutter});
+    }
+    @return $result;
+}
+
+// Grid generator
+@for $i from 1 through $cols {
+    .grid-#{$i} {
+        width: grid($i);
+    }
+}
+
+// Grid structure
+@mixin grid-structure {
+    float: left;
+    min-height: 1px;
+    margin-left: $gutter / 2;
+    margin-right: $gutter / 2;
+    @include device(s) {
+        width: 100%;
+        float: none;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+// Grid seletor
+[class^="grid-"] {
+    @include grid-structure;
+}
+
+// Offset generator
+@for $i from 1 through $cols {
+    .offset-#{$i} {
+        margin-left: grid($i, offset);
+        @extend %offset;
+    }
+}
+
+@include device(sm) {
+    %offset {
+        margin-left: 0px;
+    }
+}
+
+// Clearfix mixin
+@mixin clearfix {
+    &::after, &::before {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+// Container
+@mixin container {
+    max-width: $xl-device;
+    margin: 0 auto;
+    position: relative;
+    @include device(lg) {
+        max-width: $lg-device;
+    }
+    @include device(md) {
+        max-width: $md-device;
+    }
+    @include device(sm) {
+        max-width: $sm-device;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    @include clearfix;
+}
+
+.container {
+    @include container;
 }
 
 // Row
-//
-// Rows contain and clear the floats of your columns.
-
-@if $enable-grid-classes {
-  .row {
-    @include make-row();
-  }
-
-  // Remove the negative margin from default .row, then the horizontal padding
-  // from all immediate children columns (to prevent runaway style inheritance).
-  .no-gutters {
-    margin-right: 0;
-    margin-left: 0;
-
-    > .col,
-    > [class*="col-"] {
-      padding-right: 0;
-      padding-left: 0;
+@mixin row {
+    position: relative;
+    margin-left: -$gutter / 2;
+    margin-right: -$gutter / 2;
+    @include device(s) {
+        margin-left: 0;
+        margin-right: 0;
     }
-  }
+    @include clearfix;
 }
 
-// Columns
-//
-// Common styles for small and large grid columns
-
-@if $enable-grid-classes {
-  @include make-grid-columns();
+.row {
+    @include row;
 }
