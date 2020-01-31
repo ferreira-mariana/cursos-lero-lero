@@ -12,6 +12,13 @@ body {
     flex-flow: row wrap;
 }
 
+/* Forms */
+
+form .error {
+    color: #ff0000;
+}
+
+
 /* Section Intro */
 
 .intro {

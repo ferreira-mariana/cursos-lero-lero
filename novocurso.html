@@ -66,30 +66,30 @@
 		<div class="container py-5">
 			<h1 class=" text-primary display-4">Novo curso</h1>
 			<p class="lead">Cadastre seu próprio curso!</p>
-			<form class="py-3">
+			<form class="py-3" name="novocurso">
 				<div class="form-group">
-					<label for="exampleInputName">Nome do curso</label>
-					<input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
+					<label for="nome_curso">Nome do curso</label>
+					<input type="text" class="form-control" name="nome_curso" id="nome_curso" aria-describedby="nameHelp"
 						placeholder="Digite o nome">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputCPF">Requisito</label>
-					<input type="text" class="form-control" id="exampleInputCPF" aria-describedby="cpfHelp"
+					<label for="requisito">Requisito</label>
+					<input type="text" class="form-control" name="requisito" id="requisito" aria-describedby="cpfHelp"
 						placeholder="Digite o requisito">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputPhone">Ementa</label>
-					<textarea type="text" class="form-control" id="exampleInputPhone" aria-describedby="phoneHelp"
+					<label for="ementa">Ementa</label>
+					<textarea type="text" class="form-control" name="ementa" id="ementa" aria-describedby="phoneHelp"
 						placeholder="Digite a ementa" rows="10"></textarea>
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">Carga horária</label>
-					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+					<label for="carga_horaria">Carga horária</label>
+					<input type="text" class="form-control" name="carga_horaria" id="carga_horaria" aria-describedby="emailHelp"
 						placeholder="Digite a carga horário">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputPassword1">Preço</label>
-					<input type="text" class="form-control money" id="exampleInputPassword1"
+					<label for="preco">Preço</label>
+					<input type="text" class="form-control money" id="preco" name="preco"
 						placeholder="Digite o preço">
 				</div>
 				<button type="submit" class="btn btn-primary my-3">Cadastrar curso</button>
@@ -147,7 +147,9 @@
 	<script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/jquery.mask.min.js"></script>
-    <script type="text/javascript" src="js/masks-input.js"></script>
+	<script type="text/javascript" src="js/masks-input.js"></script>
+	<script type="text/javascript" src="js/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/validate-forms.js"></script>
 </body>
 
 </html>
