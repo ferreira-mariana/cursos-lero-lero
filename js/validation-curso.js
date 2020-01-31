@@ -3,27 +3,22 @@ $(document).ready(function () {
   $(function () {
     $("form[name='novocurso']").validate({
       rules: {
-        nome_curso: {required: true, minlength: 3},
-        requisito: {required: true, minlength: 3},
-        ementa: {required: true, minlength: 20},
-        carga_horaria: "required",
-        preco: "required",
+        nome_curso: {required: true, minlength: 3, maxlength: 50},
+        requisito: {maxlength: 255},
+        ementa: {maxlength: 255},
       },
       messages: {
         nome_curso: {
           required: "Por favor, digite o nome do curso.",
-          minlength: "O nome deve ter pelo menos três caracteres."
+          minlength: "O nome deve ter pelo menos três caracteres.",
+          maxlength: "O nome deve ter no máximo 50 caracteres."
         },
         requisito: {
-          required: "Por favor, digite o requisito do curso.",
-          minlength: "O requisito deve ter pelo menos três caracteres."
+          maxlength: "O requisito deve ter no máximo 255 caracteres."
         },
         ementa: {
-          required: "Por favor, digite a ementa do curso.",
-          minlength: "O ementa deve ter pelo menos vinte caracteres."
+          maxlength: "A ementa deve ter no máximo 255 caracteres."
         },
-        carga_horaria: "Por favor, digite a carga horaria do curso.",
-        preco: "Por favor, digite o preco do curso.",
       },
       submitHandler: function (form) {
         form.submit();
