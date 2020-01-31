@@ -66,56 +66,46 @@
 		<div class="container py-5">
 			<h1 class=" text-primary display-4">Novo aluno</h1>
 			<p class="lead">Cadastra-se!</p>
-			<form class="py-3">
+			<form class="py-3" id="form-aluno" method="POST">
 				<div class="form-group">
-					<label for="exampleInputName">CPF</label>
-					<input type="text" class="form-control cpf" id="exampleInputName" aria-describedby="nameHelp"
-						placeholder="Digite seu CPF">
+					<label for="cpf">CPF*</label>
+					<input type="text" class="form-control cpf" id="cpf" name="cpf" aria-describedby="cpfHelp"	placeholder="Digite seu CPF">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputCPF">Nome</label>
-					<input type="text" class="form-control" id="exampleInputCPF" aria-describedby="cpfHelp"
-						placeholder="Digite seu nome">
+					<label for="nome">Nome*</label>
+					<input type="text" class="form-control" id="nome" name="nome" aria-describedby="nameHelp" placeholder="Digite seu nome">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputPhone">Email</label>
-					<input type="email" class="form-control" id="exampleInputPhone" aria-describedby="phoneHelp"
-						placeholder="Digite seu email" rows="10">
+					<label for="email">Email*</label>
+					<input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite seu email" rows="10">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">Celular</label>
-					<input type="text" class="form-control cellphone_with_ddd" id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Digite seu número de celular">
+					<label for="celular">Celular*</label>
+					<input type="text" class="form-control cellphone_with_ddd" id="celular" name="celular" aria-describedby="phoneHelp" placeholder="Digite seu número de celular">
                 </div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">Endereço</label>
-					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Digite seu endereço">
+					<label for="endereco">Endereço*</label>
+					<input type="text" class="form-control" id="endereco" name="endereco" aria-describedby="addressHelp" placeholder="Digite seu endereço">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">Cidade</label>
-					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Digite sua cidade">
+					<label for="cidade">Cidade*</label>
+					<input type="text" class="form-control" id="cidade" name="cidade" aria-describedby="cityHelp" placeholder="Digite sua cidade">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">Bairro</label>
-					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Digite seu bairro">
+					<label for="bairro">Bairro*</label>
+					<input type="text" class="form-control" id="bairro" name="bairro" aria-describedby="neighborhoodHelp" placeholder="Digite seu bairro">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">CEP</label>
-					<input type="text" class="form-control cep" id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Digite seu CEP">
+					<label for="cep">CEP*</label>
+					<input type="text" class="form-control cep" id="cep" name="cep" aria-describedby="cepHelp" placeholder="Digite seu CEP">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">Login</label>
-					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Digite seu usuário para login">
+					<label for="login">Login*</label>
+					<input type="text" class="form-control" id="login" name="login" aria-describedby="loginHelp" placeholder="Digite seu usuário para login">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">Senha</label>
-					<input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Escolha uma senha">
+					<label for="senha">Senha*</label>
+					<input type="password" class="form-control" id="senha" name="senha" aria-describedby="passwordHelp" placeholder="Escolha uma senha">
 				</div>
 				<button type="submit" class="btn btn-primary my-3">Salvar</button>
 			</form>
@@ -171,7 +161,9 @@
 	<script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/jquery.mask.min.js"></script>
-    <script type="text/javascript" src="js/masks-input.js"></script>
+	<script type="text/javascript" src="js/masks-input.js"></script>
+	<script type="text/javascript" src="js/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/validation-aluno.js"></script>
 </body>
 
 </html>

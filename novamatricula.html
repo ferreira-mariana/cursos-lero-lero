@@ -9,15 +9,16 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body><header>
-	<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3">
-		<div class="container">
-			<a class="navbar-brand" href="index.html"><img src="assets/img/logo-integrado.png" alt="logo"></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3">
+			<div class="container">
+				<a class="navbar-brand" href="index.html"><img src="assets/img/logo-integrado.png" alt="logo"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
@@ -58,34 +59,29 @@
 					</li>
 				</ul>
 			</div>
-		</div>
-	</nav>
-</header>
+		</nav>
+	</header>
 
 	<section>
 		<div class="container py-5">
 			<h1 class=" text-primary display-4">Novo matrícula</h1>
 			<p class="lead">Faça sua matrícula!</p>
-			<form class="py-3">
+			<form class="py-3" id="form-matricula" method="POST">
 				<div class="form-group">
-					<label for="exampleInputName">Id da turma</label>
-					<input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
-						placeholder="Digite o código da turma">
+					<label for="id_turma">Id da turma*</label>
+					<input type="text" class="form-control" id="id_turma" name="id_turma" aria-describedby="idTurmaHelp" placeholder="Digite o código da turma">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputCPF">Id do aluno</label>
-					<input type="email" class="form-control" id="exampleInputCPF" aria-describedby="cpfHelp"
-						placeholder="Digite o código do aluno">
+					<label for="id_aluno">Id do aluno*</label>
+					<input type="email" class="form-control" id="id_aluno" name="id_aluno" aria-describedby="idAlunoHelp" placeholder="Digite o código do aluno">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputPhone">Data</label>
-					<input type="date" class="form-control" id="exampleInputPhone" aria-describedby="phoneHelp"
-						placeholder="Digite a data da matrícula" rows="10">
+					<label for="data_matricula">Data*</label>
+					<input type="date" class="form-control" id="data_matricula" name="data_matricula" aria-describedby="dataMatriculaHelp"	placeholder="Digite a data da matrícula" rows="10">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">Nota</label>
-					<input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Digite a nota">
+					<label for="nota_matricula">Nota*</label>
+					<input type="number" class="form-control" id="nota_matricula" name="nota_matricula" aria-describedby="notaMatriculaHelp" placeholder="Digite a nota">
 				</div>
 				<button type="submit" class="btn btn-primary my-3">Salvar</button>
 			</form>
@@ -140,6 +136,8 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/validation-matricula.js"></script>
 </body>
 
 </html>
