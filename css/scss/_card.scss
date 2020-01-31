@@ -1,5 +1,5 @@
 .card {
     .card-img-top {
-        object-fit: cover;
+        @extend %object-fit-cover;
     }
 }
