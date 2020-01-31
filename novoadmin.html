@@ -66,21 +66,18 @@
 		<div class="container py-5">
 			<h1 class=" text-primary display-4">Novo admin</h1>
 			<p class="lead">Cadastra-se para administrar!</p>
-			<form class="py-3">
+			<form class="py-3" id="form-novo-admin">
 				<div class="form-group">
-					<label for="exampleInputName">Nome completo</label>
-					<input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
-						placeholder="Digite seu nome">
+					<label for="nome">Nome completo</label>
+					<input type="text" class="form-control" id="nome" name="nome" aria-describedby="nameHelp" placeholder="Digite seu nome">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">Login</label>
-					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Digite seu nome para login">
+					<label for="email">Login</label>
+					<input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite seu nome para login">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputPassword1">Senha</label>
-					<input type="password" class="form-control" id="exampleInputPassword1"
-						placeholder="Digite sua senha">
+					<label for="senha">Senha</label>
+					<input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha">
 				</div>
 				<button type="submit" class="btn btn-primary my-3">Cadastrar</button>
 			</form>
@@ -135,6 +132,8 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/validation-admin.js"></script>
 </body>
 
 </html>
