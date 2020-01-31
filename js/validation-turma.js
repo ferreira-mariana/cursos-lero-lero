@@ -4,10 +4,9 @@ $(document).ready(function () {
     $("form[name='novaturma']").validate({
       rules: {
         instrutor: {required: true, minlength: 3},
-        curso: {required: true, minlength: 5},
+        curso: {required: true, minlength: 3},
         data_inicio: {required: true, minDateIni: true},
         data_fim: {required: true, minDateFim: true},
-        carga_horaria: "required",
       },
       messages: {
         instrutor: {
@@ -26,7 +25,6 @@ $(document).ready(function () {
           required: "Por favor, digite a data de fim do curso.",
           minDate: "A data de fim deve depois da data de início."
         },
-        carga_horaria: "Por favor, digite a carga horaria.",
         
       },
       submitHandler: function (form) {
