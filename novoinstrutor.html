@@ -66,30 +66,30 @@
 		<div class="container py-5">
 			<h1 class=" text-primary display-4">Novo instrutor</h1>
 			<p class="lead">Cadastra-se para poder dar aulas!</p>
-			<form class="py-3">
+			<form class="py-3" name='novoinstrutor'>
 				<div class="form-group">
-					<label for="exampleInputName">Nome completo</label>
-					<input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
+					<label for="nome">Nome completo</label>
+					<input type="text" class="form-control" id="nomeinstrutor" name='nome' aria-describedby="nameHelp"
 						placeholder="Digite o nome">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputCPF">Email</label>
-					<input type="email" class="form-control" id="exampleInputCPF" aria-describedby="cpfHelp"
+					<label for="email">Email</label>
+					<input type="email" class="form-control" id="exampleInputCPF" name="email" aria-describedby="cpfHelp"
 						placeholder="Digite seu email">
 				</div>
 				<div class="form-group">
 					<label for="exampleInputPhone">Valor hora</label>
-					<input type="text" class="form-control money" id="exampleInputPhone" aria-describedby="phoneHelp"
+					<input type="text" class="form-control money" id="exampleInputPhone" name="valor_hora" aria-describedby="phoneHelp"
 						placeholder="Digite o valor da sua hora" rows="10">
 				</div>
 				<div class="form-group">
 					<label for="exampleInputEmail1">Login</label>
-					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+					<input type="text" class="form-control" id="exampleInputEmail1" name='login' aria-describedby="emailHelp"
 						placeholder="Digite seu nome para login">
 				</div>
 				<div class="form-group">
 					<label for="exampleInputPassword1">Senha</label>
-					<input type="password" class="form-control" id="exampleInputPassword1"
+					<input type="password" class="form-control" id="exampleInputPassword1" name='senha'
 						placeholder="Digite sua senha">
 				</div>
 				<button type="submit" class="btn btn-primary my-3">Cadastrar</button>
@@ -148,6 +148,8 @@
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/jquery.mask.min.js"></script>
     <script type="text/javascript" src="js/masks-input.js"></script>
+	<script type="text/javascript" src="js/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/validation-instrutor.js"></script>
 </body>
 
 </html>
