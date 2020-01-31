@@ -26,7 +26,7 @@ $(document).ready(function () {
           required: "Por favor, digite a seu senha.",
           minlength: "A senha deve ter pelo menos cinco caracteres."
         },
-        valor_hora: "Por favor, digite o valor da hora..",
+        valor_hora: "Por favor, digite o valor da hora.",
       },
       submitHandler: function (form) {
         form.submit();

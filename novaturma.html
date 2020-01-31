@@ -66,30 +66,30 @@
 		<div class="container py-5">
 			<h1 class=" text-primary display-4">Nova turma</h1>
 			<p class="lead">Cadastre sua turma para poder dar aulas!</p>
-			<form class="py-3">
+			<form class="py-3 novaturma" name='novaturma'>
 				<div class="form-group">
 					<label for="exampleInputName">Nome do instrutor</label>
-					<input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
+					<input type="text" class="form-control" id="exampleInputName" name='instrutor' aria-describedby="nameHelp"
 						placeholder="Digite o nome do instrutor">
 				</div>
 				<div class="form-group">
 					<label for="exampleInputCPF">Nome do curso</label>
-					<input type="text" class="form-control" id="exampleInputCPF" aria-describedby="cpfHelp"
+					<input type="text" class="form-control" id="exampleInputCPF" name='curso' aria-describedby="cpfHelp"
 						placeholder="Digite o nome do curso">
 				</div>
-				<div class="form-group">
+				<div class="form-group data">
 					<label for="exampleInputPhone">Data de início</label>
-					<input type="date" class="form-control" id="exampleInputPhone" aria-describedby="phoneHelp"
+					<input type="date" class="form-control" id="exampleInputPhone" name='data_inicio' aria-describedby="phoneHelp"
 						placeholder="Digite quando irá começar" rows="10">
 				</div>
-				<div class="form-group">
+				<div class="form-group data">
 					<label for="exampleInputEmail1">Data de fim</label>
-					<input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+					<input type="date" class="form-control" id="exampleInputEmail1" name='data_fim' aria-describedby="emailHelp"
 						placeholder="Digite quando irá terminar">
 				</div>
 				<div class="form-group">
 					<label for="exampleInputPassword1">Carga horária</label>
-					<input type="number" class="form-control" id="exampleInputPassword1"
+					<input type="number" class="form-control" id="exampleInputPassword1" name='carga_horaria' 
 						placeholder="Digite a carga horária do seu curso">
 				</div>
 				<button type="submit" class="btn btn-primary my-3">Cadastrar turma</button>
@@ -145,6 +145,8 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/validation-turma.js"></script>
 </body>
 
 </html>
