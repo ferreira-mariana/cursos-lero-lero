@@ -1,2 +1,1 @@
-# trabalho-dev-web
-Trabalho da disciplina Desenvolvimento Web
+Trabalho da disciplina Desenvolvimento Web, UFF.
